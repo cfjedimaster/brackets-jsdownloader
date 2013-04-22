@@ -1,0 +1,6 @@
+[
+	{"key":"jquery","name":"jQuery 2.0","file":"http://code.jquery.com/jquery-2.0.0.min.js"},
+	{"key":"handlebars","name":"Handlebars 1.0.0 rc3","file":"https://raw.github.com/wycats/handlebars.js/1.0.0-rc.3/dist/handlebars.runtime.js"},
+	{"key":"underscore","name":"Underscore 1.4.4","file":"http://underscorejs.org/underscore-min.js"},
+	{"key":"zepto","name":"Zepto 1.0", "file":"http://zeptojs.com/zepto.min.js"}
+]
