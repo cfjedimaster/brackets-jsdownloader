@@ -29,7 +29,6 @@ define(function (require, exports, module) {
     function _handleShowJSDownloader() {
         //Do we have our cached index
         if(!JSDownloader.hasCachedIndex()) {
-            console.log("no good cache, so fetching.");
             $(".jsdownloader-dialog div.modal-body").html("<img src='" + require.toUrl("img/ajax-loader.gif") + "' style='float:right'><i>Caching list of libraries.<br/>Please stand by for awesome.</i>");
             Dialogs.showModalDialog("jsdownloader-dialog");
 
@@ -46,7 +45,6 @@ define(function (require, exports, module) {
     function _handleLibClick(e) {
         e.preventDefault();
         var lib = $(this).data("library");
-        console.log('click for library '+lib);
 
         //Fire off an async process to do the download
         //First, get the related span
@@ -96,15 +94,13 @@ define(function (require, exports, module) {
             pathToUse = ProjectManager.getProjectRoot().fullPath;
         }
         var libraries = JSDownloader.getIndex();
-        console.log('u gonna work? ');
-        console.dir(libraries);
-        //create a hash we can use on this side for click event
+
+		//create a hash we can use on this side for click event
         for(var i=0, len=libraries.length;i<len; i++) {
             libraryOb[libraries[i].key] = libraries[i];
         }
         var html = Mustache.render(libraryListTemplate, {library: libraries, path:pathToUse});
         $(".jsdownloader-dialog div.modal-body").html(html);
-        console.log('in theory i worked '+html);
     }
 
     CommandManager.register("Run JSDownloader", LAUNCH_JSDOWNLOADER, _handleShowJSDownloader);
