@@ -16,4 +16,6 @@ Note that the remote index is cached locally for 24 hours. I need a better way o
 
 Updates
 =======
+[5/24/2013] Support for package.json
+
 [4/22/2013] Initial Release
