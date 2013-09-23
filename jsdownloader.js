@@ -1,9 +1,11 @@
 var JSDownloader = (function() {
     
-	var INDEX_URL = "https://raw.github.com/cfjedimaster/brackets-jsdownloader/master/jsdownloader_index.json";
+	var INDEX_URL = "jsdownloader_index.json";
+
 	var INDEX_KEY = "jsdownloader.index";
 	//Number of minutes to cache
 	var CACHE_LEN = 1000*60*60*24;
+	CACHE_LEN = 0;
 	var index;
 
 	return {
@@ -23,8 +25,8 @@ var JSDownloader = (function() {
 			return true;
 		},
 
-		loadIndex:function(cb) {
-			$.get(INDEX_URL, {}, function(res,code) {
+		loadIndex:function(base,cb) {
+			$.get(base + INDEX_URL, {}, function(res,code) {
 				console.dir(res);
 				var ob = {};
 				ob.created = new Date();

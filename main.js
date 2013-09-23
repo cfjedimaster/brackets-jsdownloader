@@ -3,119 +3,177 @@ maxerr: 50, browser: true */
 /*global $, define, brackets */
 
 define(function (require, exports, module) {
-    "use strict";
+	"use strict";
 
-    var downloaderTemplate = require("text!htmlContent/downloader.html"),
-        libraryListTemplate = require("text!htmlContent/librarylist.html");
+	var downloaderTemplate = require("text!htmlContent/downloader.html"),
+		libraryListTemplate = require("text!htmlContent/librarylist.html");
 
-    var Commands                = brackets.getModule("command/Commands"),
-        CommandManager          = brackets.getModule("command/CommandManager"),
-        EditorManager           = brackets.getModule("editor/EditorManager"),
-        DocumentManager         = brackets.getModule("document/DocumentManager"),
-        Menus                   = brackets.getModule("command/Menus"),
-        Dialogs                 = brackets.getModule("widgets/Dialogs"),
-        ExtensionUtils          = brackets.getModule("utils/ExtensionUtils"),
-        ProjectManager          = brackets.getModule("project/ProjectManager"),
-        FileUtils               = brackets.getModule("file/FileUtils"),
-        NativeFileSystem        = brackets.getModule("file/NativeFileSystem");
+	var Commands                = brackets.getModule("command/Commands"),
+		CommandManager          = brackets.getModule("command/CommandManager"),
+		EditorManager           = brackets.getModule("editor/EditorManager"),
+		DocumentManager         = brackets.getModule("document/DocumentManager"),
+		Menus                   = brackets.getModule("command/Menus"),
+		Dialogs                 = brackets.getModule("widgets/Dialogs"),
+		ExtensionUtils          = brackets.getModule("utils/ExtensionUtils"),
+		ProjectManager          = brackets.getModule("project/ProjectManager"),
+		FileUtils               = brackets.getModule("file/FileUtils"),
+		NativeFileSystem        = brackets.getModule("file/NativeFileSystem"),
+		AppInit                 = brackets.getModule("utils/AppInit"),
+		NodeConnection          = brackets.getModule("utils/NodeConnection");
 
 
-    require('jsdownloader');
+	var nodeConnection;
 
-    var LAUNCH_JSDOWNLOADER = "jsdownloader.run";
-    var libraryOb = {};
-    var pathToUse;
+	require('jsdownloader');
 
-    function _handleShowJSDownloader() {
-        //Do we have our cached index
-        if(!JSDownloader.hasCachedIndex()) {
-            $(".jsdownloader-dialog div.modal-body").html("<img src='" + require.toUrl("img/ajax-loader.gif") + "' style='float:right'><i>Caching list of libraries.<br/>Please stand by for awesome.</i>");
-            Dialogs.showModalDialog("jsdownloader-dialog");
+	var LAUNCH_JSDOWNLOADER = "jsdownloader.run";
+	var libraryOb = {};
+	var pathToUse;
 
-            JSDownloader.loadIndex(function() {
-                _displayIndex();
-            });
+	function _handleShowJSDownloader() {
+		//Do we have our cached index
+		if(!JSDownloader.hasCachedIndex()) {
+			$(".jsdownloader-dialog div.modal-body").html("<img src='" + require.toUrl("img/ajax-loader.gif") + "' style='float:right'><i>Caching list of libraries.<br/>Please stand by for awesome.</i>");
+			Dialogs.showModalDialog("jsdownloader-dialog");
 
-        } else {
-            Dialogs.showModalDialog("jsdownloader-dialog");
-            _displayIndex();
-        }
-    }
+			JSDownloader.loadIndex(require.toUrl("./"),function() {
+				_displayIndex();
+			});
 
-    function _handleLibClick(e) {
-        e.preventDefault();
-        var lib = $(this).data("library");
+		} else {
+			Dialogs.showModalDialog("jsdownloader-dialog");
+			_displayIndex();
+		}
+	}
 
-        //Fire off an async process to do the download
-        //First, get the related span
-        var $span = $(this).next("span");
-        $span.html("<i>Downloading...</i>");
+	function _handleLibClick(e) {
+		e.preventDefault();
+		var lib = $(this).data("library");
 
-        /*
-        Ok, now to create the deferreds for our downloads. Note that we don't yet
-        support N files for a library, but I'm going to build it later. So for now
-        we just assume.
-        */
-        var library = libraryOb[lib];
-        var filesToGet;
-        if(library.file) {
-            filesToGet = [library.file];
-        } else {
-            filesToGet = library.files;
-        }
+		//Fire off an async process to do the download
+		//First, get the related span
+		var $span = $(this).next("span");
+		$span.html("<i>Downloading...</i>");
 
-        var deferreds = [];
+		/*
+		Ok, now to create the deferreds for our downloads. Note that we don't yet
+		support N files for a library, but I'm going to build it later. So for now
+		we just assume.
+		*/
+		var library = libraryOb[lib];
 
-        filesToGet.forEach(function(f) {
-            var deferred = $.get(f, {}, function(res,code) {
-                var pathToSave = pathToUse + f.split("/").pop();
-                console.log('about to save '+pathToSave);
-                var fileEntry = new NativeFileSystem.NativeFileSystem.FileEntry(pathToSave);
-                FileUtils.writeText(fileEntry, res);
+		var filesToGet;
+		if(library.file) {
+			filesToGet = [library.file];
+		} else {
+			filesToGet = library.files;
+		}
 
-            });
-            deferreds.push(deferred);
+		console.dir(filesToGet);
 
+        var suPromise = nodeConnection.domains.downloader.fetchStuff(filesToGet,pathToUse);
+        suPromise.done(function(port) {
+			$span.html("<i>Done!</i>");
+			ProjectManager.refreshFileTree();
         });
 
-        $.when.apply(null, deferreds).then(function() {
-            $span.html("<i>Done!</i>");
-        });
+		/*
+		var deferreds = [];
 
-    }
+		filesToGet.forEach(function(f) {
+			var deferred = $.get(f, {}, function(res,code) {
+				var pathToSave = pathToUse + f.split("/").pop();
+				console.log('about to save '+pathToSave);
+				var fileEntry = new NativeFileSystem.NativeFileSystem.FileEntry(pathToSave);
+				FileUtils.writeText(fileEntry, res);
 
-    function _displayIndex() {
-        console.log("_displayIndex");
-        pathToUse = "";
-        var selectedItem = ProjectManager.getSelectedItem();
-        if(selectedItem && selectedItem.isDirectory) {
-            pathToUse = selectedItem.fullPath;
-        } else {
-            pathToUse = ProjectManager.getProjectRoot().fullPath;
-        }
-        var libraries = JSDownloader.getIndex();
+			});
+			deferreds.push(deferred);
+
+		});
+
+		$.when.apply(null, deferreds).then(function() {
+			$span.html("<i>Done!</i>");
+		});
+		*/
+
+	}
+
+	function _displayIndex() {
+		console.log("_displayIndex");
+		pathToUse = "";
+		var selectedItem = ProjectManager.getSelectedItem();
+		if(selectedItem && selectedItem.isDirectory) {
+			pathToUse = selectedItem.fullPath;
+		} else {
+			pathToUse = ProjectManager.getProjectRoot().fullPath;
+		}
+		var libraries = JSDownloader.getIndex();
 
 		//create a hash we can use on this side for click event
-        for(var i=0, len=libraries.length;i<len; i++) {
-            libraryOb[libraries[i].key] = libraries[i];
-        }
-        var html = Mustache.render(libraryListTemplate, {library: libraries, path:pathToUse});
-        $(".jsdownloader-dialog div.modal-body").html(html);
-    }
+		for(var i=0, len=libraries.length;i<len; i++) {
+			libraryOb[libraries[i].key] = libraries[i];
+		}
+		var html = Mustache.render(libraryListTemplate, {library: libraries, path:pathToUse});
+		$(".jsdownloader-dialog div.modal-body").html(html);
+	}
 
-    CommandManager.register("Run JSDownloader", LAUNCH_JSDOWNLOADER, _handleShowJSDownloader);
+	function chain() {
+		var functions = Array.prototype.slice.call(arguments, 0);
+		if (functions.length > 0) {
+			var firstFunction = functions.shift();
+			var firstPromise = firstFunction.call();
+			firstPromise.done(function () {
+				chain.apply(null, functions);
+			});
+		}
+	}
 
-    function init() {
+	AppInit.appReady(function() {
 
-        var menu = Menus.getMenu(Menus.AppMenuBar.FILE_MENU);
-        menu.addMenuItem(LAUNCH_JSDOWNLOADER, "", Menus.AFTER);
+		nodeConnection = new NodeConnection();
 
-        $('body').append(downloaderTemplate);
+		function connect() {
+			var connectionPromise = nodeConnection.connect(true);
+			connectionPromise.fail(function () {
+				console.error("[brackets-jsdownloader] failed to connect to node");
+			});
+			return connectionPromise;
+		}
+		
+		// Helper function that loads our domain into the node server
+		function loadMyDomain() {
+			var path = ExtensionUtils.getModulePath(module, "node/downloader");
+			var loadPromise = nodeConnection.loadDomains([path], true);
+			loadPromise.fail(function (e) {
+				console.log(JSON.stringify(e));
+				console.log("[brackets-jsdownloader] failed to load domain");
+			});
+			
+			loadPromise.done(function(e) {
+				ready();
+			});
+			
+			return loadPromise;
+		}
 
-        $(document).on("click",".jsdownloader-dialog div.modal-body a", _handleLibClick);
+		function ready() {
+			/* At this point we are ready to add to the UI */
+			CommandManager.register("Run JSDownloader", LAUNCH_JSDOWNLOADER, _handleShowJSDownloader);
 
-    }
+			var menu = Menus.getMenu(Menus.AppMenuBar.FILE_MENU);
+			menu.addMenuItem(LAUNCH_JSDOWNLOADER, "", Menus.AFTER);
 
-    init();
+			$('body').append(downloaderTemplate);
+
+			$(document).on("click",".jsdownloader-dialog div.modal-body a", _handleLibClick);
+
+			console.log("[brackets-jsdownloader] Ready for ludicrous speed!");
+		}
+
+		chain(connect, loadMyDomain);
+
+	});
+
 
 });
