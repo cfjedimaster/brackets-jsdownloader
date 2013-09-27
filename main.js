@@ -100,7 +100,6 @@ define(function (require, exports, module) {
 	}
 
 	function _displayIndex() {
-		console.log("_displayIndex");
 		pathToUse = "";
 		var selectedItem = ProjectManager.getSelectedItem();
 		if(selectedItem && selectedItem.isDirectory) {
