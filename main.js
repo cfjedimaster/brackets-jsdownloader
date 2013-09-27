@@ -162,6 +162,10 @@ define(function (require, exports, module) {
 
 			var menu = Menus.getMenu(Menus.AppMenuBar.FILE_MENU);
 			menu.addMenuItem(LAUNCH_JSDOWNLOADER, "", Menus.AFTER);
+            
+            var context_menu = Menus.getContextMenu(Menus.ContextMenuIds.PROJECT_MENU);
+            context_menu.addMenuDivider();
+            context_menu.addMenuItem(LAUNCH_JSDOWNLOADER);
 
 			$('body').append(downloaderTemplate);
 
