@@ -47,7 +47,6 @@
 				res.setEncoding('binary');
 
 				res.on('data', function(chunk){
-					console.log('chunk');
 					imagedata += chunk;
 				});
 
