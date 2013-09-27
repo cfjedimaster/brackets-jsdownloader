@@ -4,6 +4,7 @@
 	var domainName = "downloader";
 
 	var http = require('http');
+	var https = require('https');
 	var fs = require('fs');
 
 	/*
@@ -40,12 +41,13 @@
 
 			// Credit: http://stackoverflow.com/a/5294619/52160
 			var file = fs.createWriteStream(fullPath);
-			var request = http.get(item.href, function(res) {
 
+			function resHandler(res) {
 				var imagedata = '';
 				res.setEncoding('binary');
 
 				res.on('data', function(chunk){
+					console.log('chunk');
 					imagedata += chunk;
 				});
 
@@ -55,9 +57,13 @@
 						console.log('File saved.');
 					});
 				});
+			}
 
-
-			});
+			if(item.href.indexOf("https") === 0) {
+				https.get(item.href, resHandler);
+			} else {
+				http.get(item.href, resHandler);
+			}
 
 
 		});

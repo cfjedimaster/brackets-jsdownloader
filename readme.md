@@ -10,6 +10,9 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[9/27/2013] Pull in a Matt Gifford request to add right click context support.
+Added https support.
+
 [9/27/2013] Removed some console.logs and fixed the cache. It is much smaller though since it is a local file read.
 
 [9/22/2013] JSD has been updated to connect to a Node app in the back end. This enables it to now handle binary
