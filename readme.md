@@ -10,6 +10,9 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[9/30/2013] Pull from bibz: The initial URL was to the latest stable release.
+It now points to the tagged version library.
+
 [9/27/2013] Pull in a Matt Gifford request to add right click context support.
 Added https support.
 
