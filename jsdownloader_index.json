@@ -1,4 +1,5 @@
 [
+	{"key":"angularjs-stable","name":"AngularJS Stable","file":{"href":"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"}},
 	{"key":"jquery","name":"jQuery 2.0","file":{"href":"http://code.jquery.com/jquery-2.0.0.min.js"}},
 	{"key":"handlebars","name":"Handlebars 1.0.0","file":{"href":"https://raw.github.com/wycats/handlebars.js/1.0.0/dist/handlebars.runtime.js"}},
 	{"key":"underscore","name":"Underscore 1.5.2","file":"https://raw.github.com/jashkenas/underscore/1.5.2/underscore-min.js"},
@@ -7,5 +8,5 @@
 	{"key":"prototype","name":"PrototypeJS 1.7.1 (dev)", "file":"https://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"},
 	{"key":"fast","name":"FastJS 1.0.3 (dev)", "file":"http://fastjs.net/downloads/fast-1.0.3.js"},
 	{"key":"lodash","name":"Lo-Dash 2.3.0 (dev)", "file":"https://raw.github.com/lodash/lodash/2.3.0/dist/lodash.js"},
-	{"key":"raphael","name":"Raphaël 2.1.2 (dev)", "file":"https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael.js"},
+	{"key":"raphael","name":"Raphaël 2.1.2 (dev)", "file":"https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael.js"}
 ]
