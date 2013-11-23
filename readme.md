@@ -10,6 +10,9 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[11/23/2013] Pull from hayatoShingu to add more libraries. NOTE - I have not done 
+the file system API updates yet. Will do so soon.
+
 [9/30/2013] Pull from bibz: The initial URL was to the latest stable release.
 It now points to the tagged version library.
 
