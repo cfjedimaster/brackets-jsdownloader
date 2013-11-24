@@ -1,5 +1,6 @@
 [
 	{"key":"jquery-latest","name":"jQuery Latest","file":{"href":"http://code.jquery.com/jquery-latest.min.js"}},
+	{"key":"angularjs-stable","name":"AngularJS Stable","file":{"href":"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"}},
 	{"key":"jquery","name":"jQuery 2.0","file":{"href":"http://code.jquery.com/jquery-2.0.0.min.js"}},
 	{"key":"handlebars","name":"Handlebars 1.0.0","file":{"href":"https://raw.github.com/wycats/handlebars.js/1.0.0/dist/handlebars.runtime.js"}},
 	{"key":"underscore","name":"Underscore 1.5.2","file":"https://raw.github.com/jashkenas/underscore/1.5.2/underscore-min.js"},
