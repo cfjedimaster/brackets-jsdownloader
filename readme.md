@@ -10,6 +10,8 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[11/24/2013] Updates from clouddueling to add more libraries.
+
 [11/23/2013] Pull from hayatoShingu to add more libraries. NOTE - I have not done 
 the file system API updates yet. Will do so soon.
 
