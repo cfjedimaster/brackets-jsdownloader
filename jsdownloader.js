@@ -4,7 +4,7 @@ var JSDownloader = (function() {
 
 	var INDEX_KEY = "jsdownloader.index";
 	//Number of minutes to cache (smaller now since local)
-	var CACHE_LEN = 1000*60*60;
+	var CACHE_LEN = 1000*60;
 	var index;
 
 	return {

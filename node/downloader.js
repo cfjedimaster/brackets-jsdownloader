@@ -15,7 +15,6 @@
 	* For each, I fetch X and save to Y
 	*/
 	function fetchStuff(urls,basePath) {
-		console.log("fetchStuff");
 		console.log(JSON.stringify(urls));
 		console.log('path = '+basePath);
 
