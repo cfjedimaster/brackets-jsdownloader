@@ -17,7 +17,6 @@ define(function (require, exports, module) {
 		ExtensionUtils          = brackets.getModule("utils/ExtensionUtils"),
 		ProjectManager          = brackets.getModule("project/ProjectManager"),
 		FileUtils               = brackets.getModule("file/FileUtils"),
-		NativeFileSystem        = brackets.getModule("file/NativeFileSystem"),
 		AppInit                 = brackets.getModule("utils/AppInit"),
 		NodeConnection          = brackets.getModule("utils/NodeConnection");
 
@@ -76,26 +75,6 @@ define(function (require, exports, module) {
 			$span.html("<i>Done!</i>");
 			ProjectManager.refreshFileTree();
         });
-
-		/*
-		var deferreds = [];
-
-		filesToGet.forEach(function(f) {
-			var deferred = $.get(f, {}, function(res,code) {
-				var pathToSave = pathToUse + f.split("/").pop();
-				console.log('about to save '+pathToSave);
-				var fileEntry = new NativeFileSystem.NativeFileSystem.FileEntry(pathToSave);
-				FileUtils.writeText(fileEntry, res);
-
-			});
-			deferreds.push(deferred);
-
-		});
-
-		$.when.apply(null, deferreds).then(function() {
-			$span.html("<i>Done!</i>");
-		});
-		*/
 
 	}
 
