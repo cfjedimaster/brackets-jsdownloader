@@ -9,5 +9,7 @@
 	{"key":"prototype","name":"PrototypeJS 1.7.1 (dev)", "file":"https://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"},
 	{"key":"fast","name":"FastJS 1.0.3 (dev)", "file":"http://fastjs.net/downloads/fast-1.0.3.js"},
 	{"key":"lodash","name":"Lo-Dash 2.3.0 (dev)", "file":"https://raw.github.com/lodash/lodash/2.3.0/dist/lodash.js"},
-	{"key":"raphael","name":"Raphaël 2.1.2 (dev)", "file":"https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael.js"}
+	{"key":"raphael","name":"Raphaël 2.1.2 (dev)", "file":"https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael.js"},
+	{"key":"quojs","name":"QuoJs","file":"https://github.com/soyjavi/package-quojs/archive/2.3.6.zip"},
+	{"key":"lungojs","name":"LungoJS","file":"https://github.com/tapquo/package-lungo/archive/2.2.1.zip"}
 ]
