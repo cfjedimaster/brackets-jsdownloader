@@ -10,6 +10,8 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[12/20/2013] Added LungoJS and QuoJS libs (pull request by matheusrocha89)
+
 [12/2/2013] Removed NativeFileSystem from main as I wasn't using it. Also removed a large commented out block.
 
 [11/28/2013] Lower cache (one minute), fix Zepto.js data
