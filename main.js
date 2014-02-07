@@ -73,7 +73,6 @@ define(function (require, exports, module) {
         var suPromise = nodeConnection.domains.downloader.fetchStuff(filesToGet,pathToUse);
         suPromise.done(function(port) {
 			$span.html("<i>Done!</i>");
-			ProjectManager.refreshFileTree();
         });
 
 	}

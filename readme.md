@@ -10,6 +10,8 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[2/7/2014] Remove tree refresh since Sprint 36 fixed it. Fixed bugs in the json data file. Switched to the non-runtime version of Handlebars.
+
 [1/22/2013] Handlebars 1.3.0 update
 
 [12/20/2013] Added LungoJS and QuoJS libs (pull request by matheusrocha89)

@@ -19,8 +19,8 @@
 		console.log('path = '+basePath);
 
 		urls.forEach(function(item, idx, urls) {
-			var fileName = item.href.split("/").pop();
 
+			var fileName = item.href.split("/").pop();
 			console.log("to process: "+item.href);
 			console.log("item path? "+item.path);
 
