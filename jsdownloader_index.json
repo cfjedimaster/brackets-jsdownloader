@@ -10,6 +10,6 @@
 	{"key":"fast","name":"FastJS 1.0.3 (dev)", "file":{"href":"http://fastjs.net/downloads/fast-1.0.3.js"}},
 	{"key":"lodash","name":"Lo-Dash 2.3.0 (dev)", "file":{"href":"https://raw.github.com/lodash/lodash/2.3.0/dist/lodash.js"}},
 	{"key":"raphael","name":"Raphaël 2.1.2 (dev)", "file":{"href":"https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael.js"}},
-	{"key":"quojs","name":"QuoJs","file":{"href":"https://github.com/soyjavi/package-quojs/archive/2.3.6.zip"}},
-	{"key":"lungojs","name":"LungoJS","file":{"href":"https://github.com/tapquo/package-lungo/archive/2.2.1.zip"}}
+	{"key":"quojs","name":"QuoJs","file":{"href":"https://codeload.github.com/soyjavi/package-quojs/zip/2.3.6"}},
+	{"key":"lungojs","name":"LungoJS","file":{"href":"https://codeload.github.com/tapquo/package-lungo/zip/2.2.1"}}
 ]
