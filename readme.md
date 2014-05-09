@@ -10,6 +10,7 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[5/9/2014] Update to jquery 2 and jquery mobile by @denisov21
 [5/9/2014] Update to jquery lib by @denisov21
 
 [5/9/2014] Update to lungojs and quojs by @matheusrocha89
