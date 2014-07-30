@@ -10,6 +10,8 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[7/30/2014] Phaser added. Thanks to @OttoRobba
+
 [7/9/2014] Updates:
 
 ---NEW---
