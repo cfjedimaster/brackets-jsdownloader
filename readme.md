@@ -10,6 +10,26 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[8/5/2014] Phaser lig changed. Thanks to @OttoRobba
+
+[7/30/2014] Phaser added. Thanks to @OttoRobba
+
+[7/9/2014] Updates:
+
+---NEW---
+BackboneJS 1.1.2
+Bootstrap 3.2.0 CSS
+Bootstrap 3.2.0 JS
+KnockoutJS 3.1.0
+
+---UPDATED---
+Underscore 1.5.2 -> 1.6.0
+PrototypeJS 1.7.1 (dev) -> 1.7.2
+Lo-Dash 2.3.0 (dev) -> 2.4.1
+Raphaël 2.1.2 (dev) -> 2.1.2
+
+Thanks to https://github.com/tobipch
+
 [5/9/2014] Update to jquery 2 and jquery mobile by @denisov21
 [5/9/2014] Update to jquery lib by @denisov21
 
