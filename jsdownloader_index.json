@@ -1,20 +1,20 @@
 [
-	{"key":"jquery 1.x","name":"jQuery 1.x","version":"1.11.0","file":{"href":"http://code.jquery.com/jquery-1.11.1.min.js"}},
+	{"key":"jquery 1.x","name":"jQuery 1.x","version":"1.11.1","file":{"href":"http://code.jquery.com/jquery-1.11.1.min.js"}},
 	{"key":"jquery 2.x","name":"jQuery 2.x","version":"2.1.1","file":{"href":"http://code.jquery.com/jquery-2.1.1.min.js"}},
 	{"key":"angularjs-stable","name":"AngularJS Stable","version":"1.2.2","file":{"href":"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.2/angular.min.js"}},
-	{"key":"handlebars","name":"Handlebars","version":"1.3.0","file":{"href":"http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js"}},
+	{"key":"handlebars","name":"Handlebars","version":"2.0.0","file":{"href":"http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"}},
+	{"key":"underscore","name":"Underscore","version":"1.7.0","file":{"href":"http://underscorejs.org/underscore-min.js"}},
 	{"key":"backbonejs","name":"BackboneJS","version":"1.1.2","file":{"href":"http://backbonejs.org/backbone-min.js"}},
-	{"key":"underscore","name":"Underscore","version":"1.6.0","file":{"href":"http://underscorejs.org/underscore-min.js"}},
-	{"key":"knockoutjs","name":"KnockoutJS","version":"3.1.0","file":{"href":"http://knockoutjs.com/downloads/knockout-3.1.0.js"}},
-	{"key":"zepto","name":"Zepto","version":"1.0", "file":{"href":"http://zeptojs.com/zepto.min.js"}},
+	{"key":"knockoutjs","name":"KnockoutJS","version":"3.2.0","file":{"href":"http://knockoutjs.com/downloads/knockout-3.2.0.js"}},
+	{"key":"emberjs","name":"EmberJS","version":"1.7.0","file":{"href":"http://builds.emberjs.com/tags/v1.7.0/ember.prod.js"}},
+	{"key":"zepto","name":"Zepto","version":"1.1.4", "file":{"href":"http://zeptojs.com/zepto.min.js"}},
 	{"key":"jqm","name":"jQuery Mobile","version":"1.3.2", "files":[{"href":"http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"},{"href":"http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"},{"href":"http://code.jquery.com/mobile/1.3.2/images/icons-36-white.png","path":"images/"},{"href":"http://code.jquery.com/mobile/1.3.2/images/icons-36-black.png","path":"images/"},{"href":"http://code.jquery.com/mobile/1.3.2/images/icons-18-black.png","path":"images/"},{"href":"http://code.jquery.com/mobile/1.3.2/images/icons-18-white.png","path":"images/"},{"href":"http://code.jquery.com/mobile/1.3.2/images/ajax-loader.gif","path":"images/"}]},
 	{"key":"prototype","name":"PrototypeJS","version":"1.7.2", "file":{"href":"https://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"}},
-	{"key":"fast","name":"FastJS","version":"1.0.3", "file":{"href":"http://fastjs.net/downloads/fast-1.0.3.js"}},
 	{"key":"lodash","name":"Lo-Dash","version":"2.4.1", "file":{"href":"https://raw.githubusercontent.com/lodash/lodash/2.4.1/dist/lodash.min.js"}},
 	{"key":"raphael","name":"Raphaël","version":"2.1.2", "file":{"href":"https://raw.githubusercontent.com/DmitryBaranovskiy/raphael/master/raphael-min.js"}},
 	{"key":"quojs","name":"QuoJS","version":"2.3.6","file":{"href":"https://codeload.github.com/soyjavi/package-quojs/zip/2.3.6"}},
 	{"key":"lungojs","name":"LungoJS","version":"2.2.1","file":{"href":"https://codeload.github.com/tapquo/package-lungo/zip/2.2.1"}},
 	{"key":"bootstrapcss","name":"Bootstrap CSS","version":"3.2.0","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"}},
 	{"key":"bootstrapjs","name":"Bootstrap JS","version":"3.2.0","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}},
-	{"key":"phaser","name":"Phaser","version":"2.0.7","file":{"href":"http://cdn.jsdelivr.net/phaser/2.0.7/phaser.min.js"}}
+    {"key":"phaser","name":"Phaser","version":"2.0.7","file":{"href":"http://cdn.jsdelivr.net/phaser/2.0.7/phaser.min.js"}}
 ]
