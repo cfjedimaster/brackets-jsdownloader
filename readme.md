@@ -10,6 +10,9 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[10/3/2014] Update by tobipch. Updates libraries and mods display a bit.
+Details: https://github.com/cfjedimaster/brackets-jsdownloader/pull/22
+
 [8/5/2014] Phaser lig changed. Thanks to @OttoRobba
 
 [7/30/2014] Phaser added. Thanks to @OttoRobba
