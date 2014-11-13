@@ -10,6 +10,8 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[11/13/2014] Update by GalawynRM (library update)
+
 [10/3/2014] Update by tobipch. Updates libraries and mods display a bit.
 Details: https://github.com/cfjedimaster/brackets-jsdownloader/pull/22
 
