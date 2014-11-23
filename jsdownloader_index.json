@@ -17,5 +17,7 @@
 	{"key":"lungojs","name":"LungoJS","version":"2.2.1","file":{"href":"https://codeload.github.com/tapquo/package-lungo/zip/2.2.1"}},
 	{"key":"bootstrapcss","name":"Bootstrap CSS","version":"3.2.0","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"}},
 	{"key":"bootstrapjs","name":"Bootstrap JS","version":"3.2.0","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}},
+    	{"key":"bootstrapjs","name":"Bootstrap JS","version":"3.3.1","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"}},
+    	{"key":"bootstrapcss","name":"Bootstrap CSS","version":"3.3.1","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"}},
     {"key":"phaser","name":"Phaser","version":"2.0.7","file":{"href":"http://cdn.jsdelivr.net/phaser/2.0.7/phaser.min.js"}}
 ]
