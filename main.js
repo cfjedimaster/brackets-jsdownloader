@@ -35,8 +35,14 @@ define(function (require, exports, module) {
 			$(".jsdownloader-dialog div.modal-body").html("<img src='" + require.toUrl("img/ajax-loader.gif") + "' style='float:right'><i>Caching list of libraries.<br/>Please stand by for awesome.</i>");
 			Dialogs.showModalDialog("jsdownloader-dialog");
 
-			JSDownloader.loadIndex(require.toUrl("./"),function() {
-				_displayIndex();
+			$(".jsdownloader-dialog div.modal-body").html("<i>Fetching content.</i>");
+
+			JSDownloader.loadIndex(function(result) {
+				if(result) {
+					_displayIndex();
+				} else {
+					$(".jsdownloader-dialog div.modal-body").html("<p>Sorry, I was unable to fetch the library information.</p>");
+				}
 			});
 
 		} else {

@@ -1,6 +1,6 @@
 var JSDownloader = (function() {
     
-	var INDEX_URL = "jsdownloader_index.json";
+	var INDEX_URL = "http://static.raymondcamden.com/jsdownloader/jsdownloader_index.json";
 
 	var INDEX_KEY = "jsdownloader.index";
 	//Number of minutes to cache (smaller now since local)
@@ -24,15 +24,17 @@ var JSDownloader = (function() {
 			return true;
 		},
 
-		loadIndex:function(base,cb) {
-			$.get(base + INDEX_URL, {}, function(res,code) {
-				console.dir(res);
+		loadIndex:function(cb) {
+			$.get(INDEX_URL, {}, function(res,code) {
 				var ob = {};
 				ob.created = new Date();
 				ob.index = res;
 				localStorage.setItem(INDEX_KEY, JSON.stringify(ob));
-				cb();
-			},"json");
+				cb(true);
+			},"json")
+			.fail(function() {
+				cb(false);
+			});
 
 		} 
 

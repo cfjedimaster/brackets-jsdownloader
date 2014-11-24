@@ -10,6 +10,11 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[11/24/2014] Ok, so I've made changes to the core so that the index is *not*
+loaded locally, but my from my own S3 server. This means that I don't have to
+increment the package and republish on index changes. I just need to accept PRs
+and then FTP the change to S3.
+
 [11/24/2014] Update by GalawynRM (library update)
 [11/23/2014] Update by pietrondo (library update)
 [11/13/2014] Update by GalawynRM (library update)
