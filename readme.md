@@ -10,6 +10,7 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[11/24/2014] Update by GalawynRM (library update)
 [11/23/2014] Update by pietrondo (library update)
 [11/13/2014] Update by GalawynRM (library update)
 
