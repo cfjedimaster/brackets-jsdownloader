@@ -10,6 +10,8 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 
 Updates
 =======
+[3/30/2015] Modernizr added. Alpha sorted libraries. Cleaned up libraries a bit.
+
 [11/24/2014] Ok, so I've made changes to the core so that the index is *not*
 loaded locally, but my from my own S3 server. This means that I don't have to
 increment the package and republish on index changes. I just need to accept PRs

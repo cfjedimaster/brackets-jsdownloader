@@ -4,7 +4,7 @@ var JSDownloader = (function() {
 
 	var INDEX_KEY = "jsdownloader.index";
 	//Number of minutes to cache (smaller now since local)
-	var CACHE_LEN = 1000*60;
+	var CACHE_LEN = 1000*0;
 	var index;
 
 	return {
@@ -28,7 +28,17 @@ var JSDownloader = (function() {
 			$.get(INDEX_URL, {}, function(res,code) {
 				var ob = {};
 				ob.created = new Date();
+
+				res.sort(function(a,b) {
+					var aName = a.name.toLowerCase();
+					var bName = b.name.toLowerCase();
+					if(aName < bName) return -1;
+					if(aName == bName) return 0;
+					return 1;
+				});
+
 				ob.index = res;
+
 				localStorage.setItem(INDEX_KEY, JSON.stringify(ob));
 				cb(true);
 			},"json")

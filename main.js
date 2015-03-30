@@ -92,7 +92,6 @@ define(function (require, exports, module) {
 			pathToUse = ProjectManager.getProjectRoot().fullPath;
 		}
 		var libraries = JSDownloader.getIndex();
-
 		//create a hash we can use on this side for click event
 		for(var i=0, len=libraries.length;i<len; i++) {
 			libraryOb[libraries[i].key] = libraries[i];

@@ -9,15 +9,18 @@
 	{"key":"knockoutjs","name":"KnockoutJS","version":"3.2.0","file":{"href":"http://knockoutjs.com/downloads/knockout-3.2.0.js"}},
 	{"key":"emberjs","name":"EmberJS","version":"1.7.0","file":{"href":"http://builds.emberjs.com/tags/v1.7.0/ember.prod.js"}},
 	{"key":"zepto","name":"Zepto","version":"1.1.4", "file":{"href":"http://zeptojs.com/zepto.min.js"}},
-	{"key":"jqm","name":"jQuery Mobile","version":"1.3.2", "files":[{"href":"http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"},{"href":"http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"},{"href":"http://code.jquery.com/mobile/1.3.2/images/icons-36-white.png","path":"images/"},{"href":"http://code.jquery.com/mobile/1.3.2/images/icons-36-black.png","path":"images/"},{"href":"http://code.jquery.com/mobile/1.3.2/images/icons-18-black.png","path":"images/"},{"href":"http://code.jquery.com/mobile/1.3.2/images/icons-18-white.png","path":"images/"},{"href":"http://code.jquery.com/mobile/1.3.2/images/ajax-loader.gif","path":"images/"}]},
+	{"key":"jqm","name":"jQuery Mobile (no icons)","version":"1.4.5", "files":
+[
+{"href":"http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"},
+{"href":"http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.2.min.css"},
+{"href":"http://code.jquery.com/mobile/1.4.5/images/ajax-loader.gif","path":"images/"}]},
 	{"key":"prototype","name":"PrototypeJS","version":"1.7.2", "file":{"href":"https://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"}},
 	{"key":"lodash","name":"Lo-Dash","version":"2.4.1", "file":{"href":"https://raw.githubusercontent.com/lodash/lodash/2.4.1/dist/lodash.min.js"}},
 	{"key":"raphael","name":"Raphaël","version":"2.1.2", "file":{"href":"https://raw.githubusercontent.com/DmitryBaranovskiy/raphael/master/raphael-min.js"}},
 	{"key":"quojs","name":"QuoJS","version":"2.3.6","file":{"href":"https://codeload.github.com/soyjavi/package-quojs/zip/2.3.6"}},
 	{"key":"lungojs","name":"LungoJS","version":"2.2.1","file":{"href":"https://codeload.github.com/tapquo/package-lungo/zip/2.2.1"}},
-	{"key":"bootstrapcss","name":"Bootstrap CSS","version":"3.2.0","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"}},
-	{"key":"bootstrapjs","name":"Bootstrap JS","version":"3.2.0","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}},
-    	{"key":"bootstrapjs","name":"Bootstrap JS","version":"3.3.1","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"}},
+		{"key":"bootstrapjs","name":"Bootstrap JS","version":"3.3.1","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"}},
     	{"key":"bootstrapcss","name":"Bootstrap CSS","version":"3.3.1","file":{"href":"http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"}},
-    {"key":"phaser","name":"Phaser","version":"2.0.7","file":{"href":"http://cdn.jsdelivr.net/phaser/2.0.7/phaser.min.js"}}
+    {"key":"phaser","name":"Phaser","version":"2.0.7","file":{"href":"http://cdn.jsdelivr.net/phaser/2.0.7/phaser.min.js"}},
+{"key":"modernizr","name":"Modernizr (Development)", "version":"Latest","file":{"href":"http://modernizr.com/downloads/modernizr-latest.js"}}
 ]
