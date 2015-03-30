@@ -11,6 +11,7 @@ ToDo: Write the docs for the jsdownloader_index.json file.
 Updates
 =======
 [3/30/2015] Modernizr added. Alpha sorted libraries. Cleaned up libraries a bit.
+Also improved the logic to get parent folder.
 
 [11/24/2014] Ok, so I've made changes to the core so that the index is *not*
 loaded locally, but my from my own S3 server. This means that I don't have to

@@ -88,6 +88,9 @@ define(function (require, exports, module) {
 		var selectedItem = ProjectManager.getSelectedItem();
 		if(selectedItem && selectedItem.isDirectory) {
 			pathToUse = selectedItem.fullPath;
+		} else if(selectedItem) {
+			//file, so get the dir
+			pathToUse = selectedItem.parentPath;
 		} else {
 			pathToUse = ProjectManager.getProjectRoot().fullPath;
 		}
